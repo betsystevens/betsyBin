@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- make html respond to different devices - initial-scale=1 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Betsy Bakes 2</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="/bb2/css/screen.css">
+	</head>
+	<body>
+		
+		<div id="page">
+			<header>
+				<a class="logo" title="Betsy Bakes" href="#"><span>Betsy Bakes</span></a>
+				<div class="hero">
+					<h1>Cooking &amp; Coding</h1>
+					<a class="btn" title="Browse recipes" href="/bb2/gallery/galleryIndex.html#">Browse recipes<span> and start cooking</span></a>
+				</div>	
+			</header>
+
+			<section class="main">
+				<aside>
+					<div class="content maindish">
+						<h3><a href="/bb2/gallery/galleryIndex.html#mains">Main Dishes</a></h3>
+						<p>Dishes I cook regularly or want handy. Some were passed down to me, some are my own creations, and some are borrowed from other websites.</p>
+					</div>
+				</aside>
+
+				<aside>
+					<div class="content soups">
+						<h3><a href="/bb2/gallery/galleryIndex.html#sides">Soups, Salads, Sides...</a></h3>
+						<p>...appetizers, snacks, breakfast, breads, anything that doesn't obviously fall into the Main Dishes or Desserts category. There will be some cross over.</p>
+					</div>
+				</aside>
+
+				<aside>
+					<div class="content desserts">
+						<h3><a href="/bb2/gallery/galleryIndex.html#desserts">Desserts, Breads, Pancakes...</a></h3>
+						<p>Desserts, breads, muffins, pies, pancakes. <br>You won't find low carb here and yes, you will find plenty of sugar!
+						</p>
+					</div>
+				</aside>
+			</section>
+
+			<section class="atmosphere">
+				<article>
+					<h2>Designing & Coding a Website</h2>
+					<p>This index page was created from a demo used in the Responsive Web Design class on Lynda.com, a fantastic class taught by Chris Converse. I recreated and redesigned it to model a cooking website. As I progress in my study of Javascript and other technologies, it serves as a convenient location to store various coding exercises as well as my recipes.</p>
+					<a class="btn" title="Creating a modern website" href="https://www.lynda.com/Chris-Converse/947917-1.html">Learn more</a>
+				</article>
+			</section>
+
+			<section class="how-to">
+				<aside>
+					<div class="content">
+						<img alt="Choosing the proper image properties" src="/bb2/images/draftingTool250.jpg">
+						<h4>Sizing Elements</h4>
+						<p>Explanations of common gotchas and often misunderstood css inner workings. Tips, tricks, fixes and reminders that help me along the way.</p>
+						<a title="Sizing CSS" href="/bb2/sizing.html">Learn More</a>
+					</div>
+				</aside>
+				<aside>
+					<div class="content">
+						<img alt="Positioning elements" src="/bb2/images/lina-angelov-poppies250x167.jpg">
+						<h4>Positioning Elements</h4>
+						<p>Mastering the relative and absolute positioning of elements is 
+							essential to website layout. Recreating this demo improved my understanding of positioning immensely.</p>
+						<a title="Positioning content." href="/bb2/photoPositionDemo.html">Learn more</a>
+					</div>	
+				</aside>
+				<blockquote>
+					<p class="quote">I think every woman should have a blowtorch.</p>
+					<p class="credit"><strong>Julia Child</strong><br><em>American Chef</em><br>Introduced the U.S. to French Cuisine</p>
+				</blockquote>
+			</section>
+
+			<nav id="nav">
+			</nav>
+			<footer>
+				&copy;2018, Betsy Bakes. All rights reserved.
+				<div class="content">
+					<a title="Site Credits" href="#">Site Credits</a>
+					<a title="Photo Credits" href="#">Photo Credits</a>
+				</div>
+			</footer>
+		</div>
+	</body>
+	<script>
+		$("document").ready(function() {
+  			$("#nav").load("/bb2/nav.html");
+		});
+	</script>
+</html>
+
+
+
