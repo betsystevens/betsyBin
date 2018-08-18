@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i');
+
+body {	
+	font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; color: #555; 
+	margin: 0; padding: 0;
+	background-color: #ddd;
+}
+
+#page { 
+	max-width: 1200px; 
+	margin: 0 auto;
+	position: relative;
+}
+
+header { 
+	top: 10px;
+	height: 100px;
+	background: gray; 
+	position: relative; 
+}
+
+header a.logo { 
+	z-index: 1;
+	position: absolute; 
+	display: block; 
+	width: 124px; 
+	height: 38px;
+	background: url(../images/logoBBWhite124x38.svg) no-repeat 0 0; background-size: contain;
+	top: 30px; left: 30px;
+	/*top: 5px; left: 30px;*/
+ }
+
+#gallery {
+	margin: 30px;
+}
+
+a.caption {
+	text-decoration: none;
+	color: #555;
+}
+a.caption:hover {
+	font-style: italic;
+}
+
+figure {
+	float: left;
+}
+figure::after { content: ''; display: block; clear: both; }
+img {
+	border: 5px solid white;
+}
+
+/* Navigation */
+
+nav { 
+	/*background-color: rgba(0,0,0,.65);*/
+	/*position: absolute;*/
+	/*top: 0px; left: 0px;*/
+	padding: 15px 0 0 0;
+	/*padding: 50px 0 0 0;*/
+	/*width: 100%;*/
+}
+/*nav ul li:hover { background-color: #2b0306; }*/
+nav ul li:hover { background-color: darkgray; }
+
+/*nav ul li a:hover { background-color: #6d0911; }*/
+nav ul li a:hover { background-color: #f0f0f0; color: black;}
+
+/*nav ul ul { position: absolute; top: 100%; background-color: #2b0306; display: none;}*/
+nav ul ul { position: absolute; top: 100%; background-color: #898E8C; display: none;}
+
+
+@media screen and (max-width: 625px) {
+
+}
+
+
+
+

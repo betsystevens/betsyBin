@@ -1,0 +1,348 @@
+/* CSS Document for recipes */
+
+/* Text */
+
+h1 { margin: 0 0 1em 0; font-size: 5.5em; font-weight: 700; }
+h2 { margin: 0 0 .5em 0; font-size: 2.7em; font-weight: 700; line-height: 1.1em; }
+h3 { margin: 0 0 .5em 0; font-size: 1.9em; font-weight: 700; }
+h4 { margin: 0 0 1.5em 0; font-size: 1.6em; font-weight: 700; }
+
+a.btn { 
+	font-size: 1.1em;
+	color: #000;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* Header */
+
+/*header { */
+		/*height: 430px;*/
+		/*background: #50811F url(../images/squashBlossoms1200x430.jpg) no-repeat center bottom; */
+		/*position: relative; */
+	/*}*/
+
+header a.logo { 
+		width: 124px; 
+		height: 38px;
+		top: 7px; left: 30px;
+	 }
+
+/*header a.logo span { display: none; }	*/
+
+header div.hero { 
+		left: 30px;
+	} 
+header div.hero h1 { 
+			margin: 0 0 0 0; 
+			font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+			color: #fff; 
+		}
+header div.hero h2 {
+			line-height: 1em; 
+			margin: 0 0 0 0; 
+			font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+			color: #fff; 
+			
+}		
+header div.hero h2 span { margin-left: 55%; }	
+
+/* Section - All */
+
+section { padding: 0 30px; }
+section::after { content: ''; display: block; clear: both; }
+
+/* Section - Title */
+
+section.title { 
+		height: 180px;
+		background-color: #50811F;
+ }
+
+ /* vertically center text by setting line height to anything larger then text height */
+
+ section.title h2 {
+ 		line-height: 3.6em;
+ 		font-size: 3.0em;
+ 		color: #fff;
+ 		margin-left: 80px;
+ }
+
+/* Section - Recipe */
+
+section.recipe { 
+		margin: 0 0; 
+		/*padding: 0; */
+		padding: 0 5px 0 0; 
+		background-color: #eee9d9;
+}
+
+section.recipe p {
+		padding-left: 30px;
+		line-height: 2.7em;
+}
+
+section.recipe h4 {
+		font-variant: small-caps;
+}
+
+/* ingredients quantity & names float left */
+section.recipe div {
+		float: left;
+}
+
+section.recipe div.main {
+		width: 100%;
+}
+
+section.recipe ul { 
+		list-style-type: none; 
+		margin: 0;
+		padding: 0;		
+}
+
+section.recipe li {
+		color: black;
+		font-weight: 500;
+}
+
+/* Section Recipe - Ingredients */
+section.recipe div.ingredients {
+		float: left;
+		width: 30%;
+		margin: 30px 10px 30px 20px;
+		}
+
+section.recipe div.ingredients h4 {
+		margin-left: 20%;
+}
+
+section.recipe div.quantity {
+ 		 	margin-right: 20px;
+ 		 	width: 20%;
+ 		 	text-align: right;
+ 		 }
+
+section.recipe .quantity.blank {
+		 opacity: 0;
+}
+
+section.recipe div.name {
+ 		 	width: 70%;
+ 		  }
+
+/* Section Recipe - Instructions */
+section.recipe div.instructions {
+		width: 60%;
+		margin: 30px 20px 30px 10px;
+}
+
+/*section.recipe .step { */
+section.recipe div.instructions li.step {
+	margin-top: .7em;
+}
+
+/* Section Recipe - notes */
+
+section.recipe aside {
+	margin: 30px 30px 30px 90px;
+	/*background-color: yellow;*/
+}
+
+section.recipe h3 {
+	font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-style: italic;
+}
+
+/* Navigation */
+
+nav { 
+	background-color: rgba(80,129,31,.85);
+	padding: 0 0 0 0;
+ }
+
+nav ul li:hover { background-color: #50811f; }
+
+nav ul li a { 
+	padding: 15px 20px; 
+ }
+
+nav ul li a:hover { background-color: #00461f; }
+
+nav ul ul { 
+	position: absolute; 
+	top: 100%; 
+	background-color: #50811f; 
+	display: none;
+}
+
+/* top-level */
+
+nav > ul { padding-left: 200px; }
+
+nav > ul > li > a { width: auto; padding: 15px 20px 15px 20px; }
+
+@media screen and (max-width: 850px) {
+	header { 
+		height: 430px;
+		position: relative; 
+	}
+
+	section.title { 
+		height: 130px;
+	}
+	section.title h2 { 
+			font-size: 2.5em; 
+			line-height: 3em;
+			margin-left: 50px;
+	}
+	section.recipe div.ingredients { 
+		width: 35%;
+	}
+	section.recipe div.instructions { 
+		width: 55%;
+	}			
+}
+
+@media screen and (max-width: 760px) {
+	
+	section.title h2 { 
+			font-size: 2.1em; 
+			line-height: 3.9em;
+			margin-left: 40px;
+			}
+
+	/* Recipe */
+
+	section.recipe div.ingredients {
+		clear: both;
+		width: 92%;
+		margin: 15px 20px 5px 40px;
+	}
+
+	section.recipe div.ingredients h4 { margin-left: 0px; margin-bottom: 5px;}	
+	section.recipe div.quantity { width: 15%; }
+	section.recipe div.name { width: 70%; }
+
+	section.recipe div.instructions h4 { margin-bottom: 5px; }
+	section.recipe div.instructions {
+		width: 92%;
+		margin: 40px 20px 15px 40px;
+	}
+
+	section.recipe div.instructions li.step { margin-top: .5em; }
+
+	section.recipe ul.steps { margin-left: 30px; }	
+
+	section.recipe aside {
+		margin: 20px 20px 20px 50px;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+	header { 
+		height: 225px;
+		position: relative; 
+	}
+
+	header a.logo {
+		width: 100%; height: 46px;
+		left: 0px; top: 0px;
+		background-color: rgba(80,129,31,.90);
+		background-image: url(../images/logoBBWhite105x32.svg); 
+		background-size: 105px 32px;
+		background-position: 45px center;
+		background-repeat: no-repeat;
+	}
+	section.title { 
+		height: 100px;
+	}
+	section.title h2 { 
+			font-size: 1.6em; 
+			line-height: 3.8em;
+			margin-left: 30px;
+	}
+
+	/* move nav from top to bottom */
+	/* static is default position, nav will be placed where it falls in html */
+	nav {
+		position: static;
+		width: auto;
+		padding: 20px 15px;
+	}
+	nav ul,
+	nav ul ul,
+	nav ul ul ul { display: block; position: static; }
+
+	nav > ul { padding: 0; }
+	nav > ul > li { float: none; margin-top: 25px; }
+
+	nav ul li:hover {background: none;}
+
+	nav ul li a {
+		width: auto;
+		display: block;
+		margin: 8px 10px;
+		padding: 8px 15px;
+		border: 1px solid rgba(255,255,255,.25);
+	}
+	nav ul li a:hover { background-color: rgba(255,255,255,.2) }
+
+	nav ul ul { background: none; }
+
+	nav ul ul li a { margin-left: 30px; }
+	nav ul ul ul li a { margin-left: 60px; }
+
+	nav a[aria-haspopup="true"]::after { display: none; }		
+}	
+
+@media screen and (max-width: 450px) {
+	header { 
+		height: 180px;
+		position: relative; 
+	}
+
+	section.title { 
+		height: 40px;
+		padding: 5px;
+	}
+	section.title h2 { 
+			font-size: 1.3em; 
+			line-height: 1.9em;
+			margin-left: 20px;
+	}
+@media screen and (max-width: 425px) {
+	header a.logo {
+		height: 36px;
+		background-color: rgba(80,129,31,.90);
+		background-image: url(../images/logoBBWhite.svg);
+		background-position: center center;
+		background-repeat:  no-repeat;
+		background-size: 126px 24px;
+	}
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

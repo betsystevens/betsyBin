@@ -1,0 +1,303 @@
+<!-- prePosition.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Photo Demo</title>
+	<style type="text/css">
+		body {
+			background: #efefef;
+			font-family: 'Arial', sans-serif; font-size: 16px;  color: #777;
+			max-width: 900px;
+		}
+		p {
+			font-size: 1.1em;
+			line-height: 1.5em;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		pre code {
+			background-color: linen;
+			border: 1px solid #fff;
+			font-size: .9em;
+			display: block;
+			padding: 20px;
+			margin: 20px;
+		}
+		code div {
+			color: green;
+		}
+		/*.dot {
+			color: green;
+		}*/
+		.container {
+			border: 1px solid lightgray;
+			height: 310px;
+			width: 300px;
+			margin: 30px 30px;
+			padding: 25px 25px;
+			position: relative;
+			background-color: #222;
+		}
+
+		/* styles for the photos to highlight differences made by changing the positioning.		*/
+		.photo {
+			border: 5px solid white;
+			height: 200px;
+			width: 200px;
+			margin: 50px auto;
+		}
+		.photo1::before {
+			content: "";
+			height: 20px;
+			width: 100px;
+			background: rgba(255,255,255,0.5);
+			display: block;
+		}
+		.photo2::before {
+			content: "";
+			height: 20px;
+			width: 100px;
+			background: rgba(255,255,255,0.5);
+			display: block;
+			position: relative;
+			top: 0px;
+			left: 0px;
+		}
+		.photo3::before {
+			content: "";
+			height: 20px;
+			width: 100px;
+			background: rgba(255,255,255,0.5);
+			display: block;
+
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		.photo4 {
+			position: relative;
+		}
+		.photo4::before {
+			content: "";
+			height: 20px;
+			width: 100px;
+			background: rgba(255,255,255,0.5);
+			display: block;
+
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		.photo5 {
+			position: relative;
+		}
+		.photo5::before {
+			content: "";
+			height: 20px;
+			width: 100px;
+			background: rgba(255,255,255,0.5);
+			display: block;
+
+			position: absolute;
+			top: -15px;
+			left: 50px;
+		}
+		
+	</style>
+</head>
+<body>
+
+<h1>Absolute vs Relative Positioning Demo</h1>
+<p>As a learning exercise I recreated the information from Joshua Johnson's awesome
+		<a href="https://designshack.net/articles/css/the-lowdown-on-absolute-vs-relative-positioning/"> post.</a>
+</p>
+
+<h3>HTML</h3>
+
+<p>
+	Start with a simple div with a class of "photo" and place a 200x200px image inside.
+</p>
+
+<pre><code>
+&lt;div class="photo"&gt;
+	&lt;div>&lt;img src="images/wolf200x200.jpg"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>	
+
+<h3>Basic CSS</h3>
+<p>
+	Set the body color to something dark. Then apply some basic styles to the photo element and give it a nice border.
+</p>
+<pre><code>
+body 
+{
+    background: #222;
+}
+.photo 
+{
+    border: 5px solid white;
+    height: 200px;
+    width: 200px;
+    margin: 50px auto;
+}
+</code></pre>
+
+<p>
+	Here is the resulting image. Nothing special but it will provide a great testing ground for our positioning experiment.
+</p>
+
+<div class="container">
+		<div class="photo">
+			<div><img src="images/wolf200x200.jpg"></div>
+		</div>
+</div>	
+<h3>Applying a Strip of Tape</h3>
+<p>
+	Let’s say we wanted to create the illusion that this photo was hanging from the background, connected by a small strip of tape. To pull this off, we’ll need to flex our newfound positioning muscle and leverage some pseudo elements.
+
+	The first thing we want to do is use the ::before pseudo element to create our strip of tape. We’ll give it a height of 20px and a width of 100px, then set the background to white at 50% opacity.
+</p>
+<pre><code>
+.photo::before 
+{
+    content: "";
+    height: 20px;
+    width: 100px;
+    background: rgba(255,255,255,0.5);
+    display: block;
+}	
+</code></pre>
+
+<p>
+	If we look at a live preview of our page after this code, we can see that we really screwed up our image. The piece of tape is really interfering with the flow of the document. It has bumped our image right out of its border!
+</p>
+<div class="container">
+	<div class="photo photo1">
+		<div><img src="images/wolf200x200.jpg"></div>
+	</div>
+</div>	
+<p>
+	Obviously, we’ve got some issues with how the pseudo element is being positioned. To attempt to fix this, let’s see what happens if we apply relative positioning to the piece of tape.
+</p>
+
+<pre><code>
+.photo::before 
+{
+    content: "";
+    height: 20px;
+    width: 100px;
+    background: rgba(255,255,255,0.5);
+    display: block;
+<div>	
+    position: relative;
+    top: 0px;
+    left: 0px;</div>
+}	
+</code></pre>
+<p>
+	Here is the effect of this code:
+</p>
+<div class="container">
+		<div class="photo photo2">
+			<div><img src="images/wolf200x200.jpg"></div>
+		</div>
+	</div>	
+<p>
+	As you can see, we didn’t fix our problem. Since this didn’t work, let’s take the opposite route and see what happens if we use absolute positioning.
+</p>	
+<pre><code>
+.photo::before 
+{
+    content: "";
+    height: 20px;
+    width: 100px;
+    background: rgba(255,255,255,0.5);
+    display: block;
+	<div>    position: absolute;
+    top: 0px;
+    left: 0px;</div>
+}
+</code></pre>
+<p>
+	Here's what our demo looks like now. The image has moved back into it's correct postion but now the tape is in the top, left corner of the browser window.
+</p>
+<div class="container">
+	<div class="photo photo3">
+		<div><img src="images/wolf200x200.jpg"></div>
+	</div>
+</div>	
+
+<p>
+	We could nudge the tape into place with the top and left values, but that would not actually be a workable solution. The reason is that this would put the tape at a specific point on the background, where it would stay no matter what. However, the image has been automatically centered in the viewport so as you change the window size it actually moves, meaning the piece of tape won’t be correctly positioned anymore.
+</p>
+<p>
+	So now we’ve tried both relative and absolute positioning with neither providing the solution we want. Where do we turn next? As it turns out, we haven’t really gotten the full story behind absolute positioning yet. You see, it doesn’t always default to the top left of the browser window. Instead, what position: absolute; really does is position the element relative to its first non-statically-positioned ancestor (inherit doesn’t count either). Since there hasn’t been one of those in previous examples, it was simply reset to the origin of the page.
+</p>
+<p>
+	So how does this translate into useful information? It turns out, we can use absolute positioning on our piece of tape, but we first need to add a positioning context to its ancestor, the photo. Now, we don’t want to absolutely position that element because we don’t want it to move anywhere. Thus, we apply relative positioning to it. Let’s see what this looks like.
+</p>
+<pre><code>
+.photo 
+{
+    border: 5px solid white;
+    height: 200px;
+    width: 200px;
+    margin: 50px auto;
+	<div>    position: relative;</div>
+}	
+
+.photo::before 
+{
+    content: "";
+    height: 20px;
+    width: 100px;
+    background: rgba(255,255,255,0.5);
+    display: block;
+	<div>    position: absolute;
+    top: 0px;
+    left: 0px;</div>
+}
+</code></pre>
+<p>
+	As you can see, the pseudo element has absolute positioning applied, which means it will choose a starting point given the location of its first non-static ancestor. Since I’ve applied relative positioning to the photo, that item fits this description. So now our piece of tape will begin at the origin of the photo (even if the photo moves due to browser resizing).
+</p>
+<div class="container">
+	<div class="photo photo4">
+		<div><img src="images/wolf200x200.jpg"></div>
+	</div>	
+</div>
+<p>
+	Now that we have found the starting position that we were looking for, we can tweak the top and left values to nudge the tape into place. Notice that I’ve applied a negative value to the top property so the tape sticks out of the image onto the background. The left position is set to center the tape horizontally.
+</p>
+<pre><code>
+.photo::before 
+{
+    content: "";
+    height: 20px;
+    width: 100px;
+    background: rgba(255,255,255,0.5);
+    display: block;
+	<div>    position: absolute;
+    top: -15px;
+    left: 50px;</div>
+}
+</code></pre>
+<p>
+	As we can see in the finished version below, combining absolute and relative positioning was exactly what we needed to pull off the effect that we were going for. 
+</p>
+<div class="container">
+	<div class="photo photo5">
+		<div><img src="images/wolf200x200.jpg"></div>
+	</div>
+</div>
+<h3>A Quick Summary</h3>
+<p>
+	Positioning contexts can be difficult to wield if you’re attempting to implement them without a solid foundation of knowledge behind how they work. Fortunately, there are only three primary pieces of information that you need to remember to master absolute and relative positioning.
+</p>
+<p>
+	The first is that relative positioning will allow you to tweak an element’s position relative to its normal starting point. The second is that absolute positioning will allow you to tweak an element’s position relative to its first non-statically-positioned ancestor (defaults to page bounds if none is found). The final piece of information to remember is that both relatively and absolutely positioned items won’t affect the static and fixed items around them (absolutely positioned items are removed from the flow, relatively positioned items occupy their original position).
+</p>
+</div>
+</body>
+</html>

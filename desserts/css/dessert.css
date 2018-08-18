@@ -1,0 +1,123 @@
+/*styling for dessert recipe pages*/
+a.btn { 
+	padding: 4px 10px; 
+	border: 1px solid #000; 
+}
+header {
+	height: 407px; 
+	background: #cb9543 url(../images/baking1220x407.jpg) no-repeat center bottom; 
+}
+header a.logo { 
+	top: 42px; left: 30px;
+}
+header div.hero { 
+	top: 165px; 
+	left: 120px; 
+}
+header div.hero h1 { 
+	line-height: 1.2em; 
+	color: #3c2d22; 
+}
+header div.hero h2 {
+	line-height: 1.1em; 
+	color: #3c2d22; 
+}	
+section.title { 
+	background-color: #00461f;
+}	
+nav { 
+	background-color: rgba(0,70,31,.90);
+	top: 35px; left: 0px;
+	padding: 0px 0 0 0;
+}
+nav ul li:hover { background-color: #00461f; }
+
+nav ul li a:hover { background-color: #50811f; }
+
+nav ul ul { 
+	background-color: #00461f; 
+}
+
+/* Media */
+
+@media screen and (max-width: 1000px) {
+	header div.hero { top: 185px; left: 6% }
+	section.recipe div.quantity {
+		/*width: 25%;*/
+	}
+	section.recipe div.name {
+		width: 65%;
+	}
+}
+@media screen and (max-width: 760px) {
+ 	header { height: 390px; background-image: url(../images/baking750x390.jpg); }
+	header div.hero { top: 220px; left: 8%; }
+
+	header div.hero h1 { font-size: 5.0em; }
+	header div.hero h2 { font-size: 2.4em; }
+}
+@media screen and (max-width: 640px) {
+	/* header height is set in recipe.css, not set in styleDessert */
+	/* header height is set in screen.css 160px @625 */
+
+	header a.logo {
+		width: 100%; height: 52px;
+		left: 0px; top: 35px;
+		background-color: rgba(0,70,31,.90);
+		background-size: 124px 38px;
+	}
+	header div.hero h1 { font-size: 4.5em; }
+	header div.hero h2 { font-size: 2em; }
+
+	section.title h2 { 
+		font-size: 1.7em;
+		line-height: 3.7em;
+	}
+}
+@media screen and (max-width: 510px) {
+
+/* Header */
+	header { height: 180px; background-image: url(../images/baking510x180.jpg); }
+
+	header a.logo {
+		width: 100%; height: 38px;
+		left: 0px; top: 5px;
+		background-color: rgba(0,70,31,.90);
+		background-image: url(../../images/logoBBWhite105x32.svg); 
+		/*background-image: url(../images/logoBBWhite105x32.svg); */
+		background-size: 105px 32px;
+		background-position: 20px center;
+		background-repeat: no-repeat;
+	}
+
+	header div.hero { width: 70%; top: 90px; left: 5.5% }
+
+	header div.hero h1 { font-size: 3.7em; }
+	header div.hero h2 { font-size: 1.4em; }
+
+	section.title { 
+		height: 50px; 
+		padding: 5px;
+	}
+
+	section.title h2 { 
+		font-size: 1.1em;
+		line-height: 3em;
+		margin-left: 20px;
+	}
+}
+@media screen and (max-width: 425px) {
+	header a.logo {
+		height: 36px;
+		background-color: rgba(0,70,31,.90);
+		background-image: url(../../images/logoBBWhite.svg);
+		background-position: center center;
+		background-repeat:  no-repeat;
+		background-size: 126px 24px;
+	}
+
+	header div.hero { text-align: left; }
+
+}
+
+

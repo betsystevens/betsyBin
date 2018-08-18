@@ -1,0 +1,225 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i');
+
+
+body {	
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 16px; font-weight: 300; color: #555; 
+	line-height: 24px;
+	margin: 0; padding: 0;
+}
+
+/*#page { max-width: 1200px; margin: 0 auto; position: relative; }*/
+#page { max-width: 1000px; margin: 0 auto; position: relative; }
+
+h1 { margin: 0 0 1em 0; font-size: 2.3em; font-weight: 700; line-height: 1.3em;}
+h2 { margin: 0 0 .5em 0; font-size: 1.6em; font-weight: 700;  line-height: 1.1em; }
+h3 { margin: 0 0 .5em 0; font-size: 1.3em; font-weight: 700; }
+h4 { margin: 0 0 1.5em 0; font-size: 1.1em; font-weight: 700; }
+
+p { margin: 0 0 1em 0; }
+
+
+.center {
+	text-align: center;
+}
+
+/* Header */
+
+
+/* #f0ede5 coconut milk; #b4b7ba harbor mist;  #2e4a62 sailor blue */
+/* height: 750px; */
+header { height: 600px; background: #f0ede5 url(../images/sackclothLaptop800x518.jpg) no-repeat center top; 
+	position: relative; }
+
+
+header div.hero { 
+		position: absolute; 
+		width: 60%;
+		top: 45%;
+		left: 25%;
+		color: #fff;
+	} 
+header div.hero h1 {
+		padding-left: 25%;
+}
+header div.hero h2 {
+	position: absolute;
+	width: 100%;
+	margin-top: 40px;
+}
+header div.hero h2 img { 
+	float: right; 
+	margin-top: -40px;
+	margin-right: 10%;
+}
+header::after { content: ''; display: block; clear: both; }
+
+a.btn { 
+	font-size: 1.2em; 
+	text-decoration: none; 
+	color: #2e4a62; 
+	border: 2px solid #2e4a62; 
+	padding: 10px 15px; 
+	/*padding: 4px 15px; */
+	transition: background-color .5s;
+}
+
+a.btn:hover { background-color: rgba(0,0,0,.3); }
+
+/* Section */
+section {
+	font-weight: 700;
+	color: #2e4a62;
+}
+
+section.bio {
+	margin: 0;
+	min-height: 100px;
+	background-color: #f0ede5;
+}
+section.bio p {
+	/*font-size: 1.3em;*/
+	line-height: 1.8em;
+	margin: 0px 60px;
+	padding: 10px 40px 30px 40px;
+	/*border: solid 1px red;*/
+}
+
+section.divider {
+	min-height: 50px;
+	background-color: #2e4a62;
+}
+
+/* Skills section */
+
+section.skills {
+	background-color: #b4b7ba;
+	/*padding-bottom: 60px;*/
+}
+
+section.skills article {
+	width: 90%;
+}
+section.skills article::after { content: ''; display: block; clear: both; }
+section.skills aside {
+	float: left;
+	padding-right: 5px;
+}
+section.skills ul {
+	position: relative;
+	float: left;
+	width: 30%;
+	margin-bottom: 30px;
+}
+section.skills li {
+	font-size: 1.4em;
+	line-height: 1.4em;
+}
+section.skills h4 {
+	margin-bottom: 30px;
+}
+section.skills article.tech {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	padding-left: 5%;
+}
+section.skills aside.self {
+	padding-left: 5%;
+}
+
+aside.self, aside.work {
+	width: 46%;
+}
+section.skills article.personal {
+	padding-bottom: 60px;
+	padding-left: 12%;
+}	 
+section.skills aside.personal ul {
+	width: 40%;
+}
+section.skills aside.personal ul.oneline {
+	width: 100%;
+	font-style: italic;
+} 
+
+
+
+
+/* section highlights */
+
+section.highLights { 
+	height: auto;
+	background: lavender url(../images/spotLight1200x900.jpg) no-repeat center top; 
+	/*background: #f0ede5 url(../images/spotLight1200x900.jpg) no-repeat center top; */
+	position: relative;
+	padding: 300px 50px 5px 100px;
+	/*padding: 250px 50px 234px 100px;*/
+	/*border: solid 1px red;*/
+}
+/*section.highLights article.workHistory {*/
+section.highLights aside {
+	padding: 0 5% 0 5%;
+	/*padding: 0 5% 0 5%;*/
+	margin-bottom: 75px;
+	/*margin-bottom: 50px;*/
+	/*border: solid 1px green;*/
+}
+/*section.highLights article.workHistory h4.job {*/
+h4.job {
+	margin-bottom: 0; 
+}
+h4.header {
+	padding-left: 165px;
+}
+h4.date {
+	float: left;
+	min-width: 165px;
+}
+section.highLights li {
+	margin-left: 150px;
+	font-size: .8em;
+}
+
+section.highLights a {
+	display: inline-block;
+	margin-top: 75px;
+}
+
+/* Media */
+
+@media screen and (max-width: 900px) {
+	h4.date, h4.job, h4.header {
+		font-size: .9em;
+		/*color: pink;*/
+	}
+	h4.header {
+		padding-left: 130px;
+	}
+	h4.date {
+		min-width: 130px;
+	}
+	section.highLights li {
+		font-size: 0.7em;
+		margin-left: 115px;
+		/*color: green;*/
+	}
+}
+@media screen and (max-width: 800px) {
+	h4.job {
+		clear: both;
+	}
+	article.workHistory ul li {
+		margin-left: 0;
+	}
+	article.education ul li {
+		clear: both;
+		margin-left: 0;
+	}
+	
+}
+
+
+
+
+

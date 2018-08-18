@@ -1,0 +1,61 @@
+/* css for main dish page */
+
+header {
+		background: #88503d url(../images/spaghetti1200x430.jpg) no-repeat center bottom; 
+}
+header div.hero {
+		top: 120px; 
+		left: 8%; 
+}
+header div.hero h1 {
+		line-height: 1.2em;
+		color: #fdfdfd; 
+}
+header div.hero h2 {
+		line-height: 1.1em; 
+		color: #fdfdfd;
+}
+ section.title h2 {
+ 		color: #fdfdfd;
+}
+
+@media screen and (max-width: 1000px) {
+	
+	h1 { font-size: 4.6em; }
+	h2 { font-size: 2.6em }
+
+	header div.hero { 
+			top: 120px; 
+			left: 5%; 
+			}
+}  /* ending bracket wasn't in the styleMain.css file */
+
+@media screen and (max-width: 850px) {
+	header {  
+			background: #88503d url(../images/spaghetti850x430.jpg) no-repeat center bottom; 
+		}
+	header div.hero { 
+			width: 100%;
+			top: 95px; 
+			left: 5%; 
+			}
+
+	header div.hero h1 {margin-left: 20px;}
+	header div.hero h1, 
+	header div.hero h2 {display: inline;}
+}	
+@media screen and (max-width: 640px) {
+	header {  
+			background: #88503d url(../images/spaghetti640x225.jpg) no-repeat center bottom; 
+	}
+	header div.hero h1, 
+	header div.hero h2 {display: none;}
+
+}
+@media screen and (max-width: 450px) {
+	header {  
+			background: #88503d url(../images/spaghetti450x180.jpg) no-repeat center bottom; 
+		}
+	}		
+
+

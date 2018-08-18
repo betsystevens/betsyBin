@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- make html respond to different devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cherry Pie</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/styleDesserts.css"> -->
+		<link rel="stylesheet" type="text/css" media="screen" href="/bb2/css/screen.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="/bb2/css/recipe.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/dessert.css">
+	</head>
+	<body>
+		
+		<div id="page">
+			
+			<header></header>
+
+			<section class="title" id="title">
+				<h2>Cherry Pie</h2>
+			</section>
+
+			<section class="recipe">
+				<div class="main">
+					<div class="ingredients">
+						<h4>Ingredients</h4>
+						<ul>
+							<li>
+								<div class="quantity">2</div>
+								<div class="name">14.5 oz cans red tart cherries</div>
+							</li>
+							<li>
+								<div class="quantity">1</div>
+								<div class="name">cup sugar</div>
+							</li>
+							<li>
+								<div class="quantity">1</div>
+								<div class="name">heaping spoonful of flour</div>
+							</li>
+						</ul>
+					</div>
+		
+					<div class="instructions">
+						<h4>Preparation</h4>
+						<ul class="steps">
+							<li class="step">Step 1.</li>
+							<li>
+								Preheat oven to 450&deg;.
+							</li>
+							<li class="step">Step 2.</li>
+							<li>
+								 Drain cherries, save a little juice, just in case.
+							</li>	
+							<li class="step">Step 3.</li>
+							<li>
+								Stir sugar &amp; flour into drained cherries.
+							</li>
+							<li class="step">Step 4.</li>
+							<li>
+								Let cherries sit while rolling out bottom crust for pie.
+							</li>
+							<li class="step">Step 5.</li>
+							<li>
+								Bake pie at 450&deg; for 20 minutes.
+							</li>
+							<li class="step">Step 6.</li>
+							<li>
+								Lower oven to 375&deg; and bake pie for 30 more minutes.
+							</li>
+						</ul>
+					</div>
+				</div>	
+				<div>
+					<aside>
+						<h3 class="chefNotes">notes from the chef...</h3>
+						<p>
+							Cherry pie, using canned cherries is a reliable pie to make. I use my soup spoons for the 'heaping' flour, I would guess it is 2 Tablespoons.  You can  experiment with the flour amount and leftover cherry juice to adjust the juiciness of the pie. 
+						</p>
+					</aside>
+				</div>
+			</section>	
+				
+			<nav id="nav"></nav>
+
+			<footer>
+				&copy;2018, Betsy Bakes
+				<div class="content">
+					<a title="Site Credits" href="#">Site Credits</a>
+					<a title="Photo Credits" href="#">Photo Credits</a>
+				</div>
+			</footer>
+
+		</div>
+		
+	</body>
+	<script>
+		$("document").ready(function() {
+			$("header").load("dessertHeader.html");
+  			$("#nav").load("/bb2/nav.html");
+		});
+	</script>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- make html respond to different devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mia's Spaghetti Sauce</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="/bb2/css/screen.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="/bb2/css/recipe.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+	</head>
+	<body>
+		
+		<div id="page">
+			
+			<header></header>
+
+			<section class="title" id="title">
+				<h2>Mia's Spaghetti Sauce</h2>
+			</section>
+
+			<section class="recipe">
+				<div class="main">
+					<div class="ingredients">
+						<h4>Ingredients</h4>
+						<ul>
+							<li>
+								<div class="quantity">1</div>
+								<div class="name">lb Italian sausage</div>
+							</li>
+							<li>
+								<div class="quantity">1</div>
+								<div class="name">28-oz can roma tomatoes</div>
+							</li>
+							<li>
+								<div class="quantity">1</div>
+								<div class="name">15-oz can tomato paste</div>
+							</li>
+							<li>
+								<div class="quantity">1</div>
+								<div class="name">green pepper, diced</div>
+							</li>
+							<li>
+								<div class="quantity">1</div>
+								<div class="name">red pepper, diced</div>
+							</li>
+							<li>
+								<div class="quantity">1</div>
+								<div class="name">orange pepper, diced</div>
+							</li>
+							<li>
+								<div class="quantity">1</div>
+								<div class="name">onion, diced</div>
+							</li>
+							<li>
+								<div class="quantity blank">0</div>
+								<div class="name">Italian seasoning</div>
+							</li>
+						</ul>
+					</div>
+		
+					<div class="instructions">
+						<h4>Preparation</h4>
+						<ul class="steps">
+							<li class="step">Step 1.</li>
+							<li>
+								Crumble and fry sausage.
+							</li>
+							<li class="step">Step 2.</li>
+							<li>
+								Saute peppers and onions in oil.
+							</li>	
+							<li class="step">Step 3.</li>
+							<li>
+								Add tomatoes and paste to sausage and vegetables.
+							</li>
+							<li class="step">Step 4.</li>
+							<li>
+								Season to taste using salt, black pepper, cayenne pepper, basil, oregano, thyme, garlic, or simply use Italian seasoning.
+							</li>
+						</ul>
+					</div>
+				</div>	
+				<div>
+					<aside>
+						<h3 class="chefNotes">Enjoy and Bon App&eacute;tit!</h3>
+					</aside>
+				</div>
+			</section>	
+				
+			<nav id="nav"></nav>
+
+			<footer>
+				&copy;2018, Betsy Bakes
+				<div class="content">
+					<a title="Site Credits" href="#">Site Credits</a>
+					<a title="Photo Credits" href="#">Photo Credits</a>
+				</div>
+			</footer>
+
+		</div>
+
+	</body>
+	<script>
+		$("document").ready(function() {
+			$("header").load("entreeHeader.html");
+  			$("#nav").load("/bb2/nav.html");
+		});
+	</script>
+</html>

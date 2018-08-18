@@ -1,0 +1,21 @@
+/* css for sides recipe pages */
+
+header {
+		background: #50811F url(../images/squashBlossoms1200x430.jpg) no-repeat center bottom; 
+}
+
+@media screen and (max-width: 850px) {
+	header { 
+		background: #50811F url(../images/squashBlossoms850x430.jpg) no-repeat center bottom; 
+	}
+}
+@media screen and (max-width: 640px) {
+	header { 
+		background: #50811F url(../images/squashBlossoms640x225.jpg) no-repeat center bottom; 
+	}
+}	
+@media screen and (max-width: 450px) {
+	header { 
+		background: #50811F url(../images/squashBlossoms450x180.jpg) no-repeat center bottom; 
+	}
+}
